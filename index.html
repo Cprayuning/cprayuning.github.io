@@ -1,15 +1,204 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-website</title>
-    <script type="module" crossorigin src="/assets/index-99c592f2.js"></script>
-    <link rel="stylesheet" href="/assets/index-79177d5e.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--  <head>-->
+<!--    <meta charset="UTF-8" />-->
+<!--    <link rel="icon" type="image/svg+xml" href="/vite.svg" />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+<!--    <title>portfolio-website</title>-->
+<!--    <script type="module" crossorigin src="/assets/index-99c592f2.js"></script>-->
+<!--    <link rel="stylesheet" href="/assets/index-79177d5e.css">-->
+<!--  </head>-->
+<!--  <body>-->
+<!--    <div id="root"></div>-->
+<!--    -->
+<!--  </body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Foto · Paling Bagus</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ekstra sedikit sentuhan font & fallback (optional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        /* efek bayangan lembut dan transisi khas */
+        .gallery-img {
+          transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.3, 1), filter 0.3s ease;
+        }
+        .gallery-img:hover {
+          transform: scale(1.06);
+          filter: brightness(1.02) contrast(1.05);
+        }
+        .card-shadow {
+          box-shadow: 0 18px 30px -12px rgba(0, 0, 0, 0.2), 0 6px 12px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-stone-50 to-gray-100 antialiased text-gray-800">
+
+<!-- pembungkus utama dengan padding nyaman -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+
+    <!-- header sederhana namun berkarakter -->
+    <div class="text-center mb-12 md:mb-16">
+        <h1 class="text-4xl md:text-5xl font-light tracking-tight text-gray-800 inline-block border-b-2 border-amber-300 pb-3 px-6">
+            ⊹  galeri  ⊹
+        </h1>
+        <p class="text-gray-500 text-base md:text-lg mt-4 max-w-xl mx-auto font-light italic">
+            momen terbaik, bingkai paling jujur — alam, kota, dan keheningan.
+        </p>
+    </div>
+
+    <!-- grid foto —— responsif, 1-2-3 kolom -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 auto-rows-fr">
+
+        <!-- setiap item: link ke gambar ukuran besar, thumbnail persegi dengan efek -->
+        <!-- 1. pegunungan -->
+        <a href="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://gcdnb.pbrd.co/images/vP3LAHLajL5n.png?o=1" alt="Pegunungan megah diselimuti kabut" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🏔️ alpen · kabut</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 2. hutan magis -->
+        <a href="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://gcdnb.pbrd.co/images/vP3LAHLajL5n.png?o=1" alt="Hutan lebat dengan sinar matahari menembus dedaunan" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🌲 hutan · sunbeams</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 3. pantai tropis -->
+        <a href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://gcdnb.pbrd.co/images/vP3LAHLajL5n.png?o=1" alt="Pantai pasir putih air jernih" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🏝️ pantai · biru</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 4. cityscape malam -->
+        <a href="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://gcdnb.pbrd.co/images/vP3LAHLajL5n.png?o=1" alt="Pemandangan kota metropolitan malam hari" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🌃 kota · lampu</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 5. padang bunga -->
+        <a href="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://gcdnb.pbrd.co/images/vP3LAHLajL5n.png?o=1" alt="Padang bunga liar warna-warni" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🌸 wildflowers</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 6. arsitektur klasik -->
+        <a href="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://gcdnb.pbrd.co/images/vP3LAHLajL5n.png?o=1" alt="Bangunan bersejarah dengan lampu hangat" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🏛️ paris · senja</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 7. langit malam berbintang -->
+        <a href="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://gcdnb.pbrd.co/images/vP3LAHLajL5n.png?o=1" alt="Langit malam dengan jutaan bintang dan galaksi" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🌌 bima sakti</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 8. danau tenang -->
+        <a href="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&auto=format" alt="Danau cermin dengan refleksi gunung" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🏞️ danau · refleksi</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 9. air terjun tersembunyi -->
+        <a href="https://images.unsplash.com/photo-1439853949127-fa647821eba0?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?w=600&auto=format" alt="Air terjun di tengah hutan tropis" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🌊 air terjun</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 10. sunset di bukit -->
+        <a href="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&auto=format" alt="Matahari terbenam oranye di perbukitan" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🌅 senja · emas</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 11. pantai karang (tambahan biar makin variatif) -->
+        <a href="https://images.unsplash.com/photo-1519046904884-53103b34b689?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1519046904884-53103b34b689?w=600&auto=format" alt="Pantai dengan batu karang dan ombak" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🌊 karang · biru</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+
+        <!-- 12. kabut pagi di lembah -->
+        <a href="https://images.unsplash.com/photo-1426604966848-d7adac402b38?w=1200&auto=format" target="_blank" rel="noopener noreferrer" class="group block card-shadow rounded-2xl overflow-hidden bg-white/40 backdrop-blur-[2px] transition duration-300 hover:shadow-2xl">
+            <div class="aspect-square overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402b38?w=600&auto=format" alt="Lembah berkabut di pagi hari" class="gallery-img w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="p-3 text-sm text-gray-500 bg-white/60 backdrop-blur-sm flex justify-between items-center">
+                <span>🌫️ lembah · sunyi</span>
+                <span class="text-amber-500 opacity-0 group-hover:opacity-100 transition">↗</span>
+            </div>
+        </a>
+    </div>
+
+    <!-- footer ringan, mempertegas kesan kurasi -->
+    <div class="text-center mt-16 text-gray-400 text-sm border-t border-gray-200/70 pt-8">
+        <p class="tracking-wide">⋆˚ 𝜆𝜏  curated dengan alam & sunyi  ˚⋆</p>
+        <p class="text-xs mt-2 opacity-60">setiap foto tautan ke versi lebih besar · galeri satu halaman</p>
+    </div>
+</main>
+
+<!-- kesan sederhana, tetapi hati-hati dengan hak cipta: semua foto dari Unsplash (gratis) -->
+</body>
 </html>
